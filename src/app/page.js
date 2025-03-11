@@ -4,11 +4,18 @@ import Image from "next/image"
 
 export default function Home() {
 	const [currentCount, setCurrentCount] = useState(0)
-
+	
   	const handleAddBtnPress = (e) => {
 		e.preventDefault()
 	  	console.log("Handle Add")
 		const newNum = currentCount + 1
+		setCurrentCount(newNum)
+	}
+
+	const handleMinusBtnPress = (e) => {
+		e.preventDefault()
+		console.log("handle Minus")
+		const newNum = currentCount - 1
 		setCurrentCount(newNum)
 	}
 
@@ -18,6 +25,7 @@ export default function Home() {
         		<h1>Counter</h1>
 				<p>{currentCount}</p>
 				<button onClick={handleAddBtnPress}>+</button>
+				<button onClick={handleMinusBtnPress}>-</button>
       		</main>
       		<footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
       		</footer>

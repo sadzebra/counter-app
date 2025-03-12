@@ -2,6 +2,14 @@
 import { useState } from 'react'
 import Image from "next/image"
 
+// TODO(UI v0.2.0):
+// 	- Change layout of the function buttons
+// 	- Update heading
+// 	- Update counter value
+// 	- Update theme
+// 	- Update layout
+// 	- Update colour scheme
+
 export default function Home() {
 	const [currentCount, setCurrentCount] = useState(0)
 	
